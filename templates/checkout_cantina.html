@@ -1,0 +1,59 @@
+{% extends "base_cantina.html" %}
+{% block content %}
+<h1 class="mb-4"><i class="fas fa-receipt"></i> Finalizar Pedido</h1>
+
+<div class="row">
+    <div class="col-md-7">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <i class="fas fa-info-circle"></i> Dados do Pedido
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Forma de Pagamento</label>
+                        <select name="metodo_pagamento" class="form-select" required>
+                            <option value="dinheiro">💰 Dinheiro</option>
+                            <option value="cartao">💳 Cartão de Crédito/Débito</option>
+                            <option value="saldo" {% if current_user.saldo >= 0 %}selected{% endif %}>
+                                🎓 Saldo do Aluno (R$ {{ "%.2f"|format(current_user.saldo) }})
+                            </option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Observações (opcional)</label>
+                        <textarea name="observacoes" class="form-control" rows="2" placeholder="Ex: sem cebola, maionese à parte, etc."></textarea>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <i class="fas fa-clock"></i> 
+                        <strong>Retirada na Cantina</strong><br>
+                        Seu pedido ficará disponível para retirada em aproximadamente 15 minutos.
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success w-100">
+                        <i class="fas fa-check-circle"></i> Confirmar Pedido
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <i class="fas fa-shopping-cart"></i> Resumo
+            </div>
+            <div class="card-body">
+                <p class="text-muted">Revise os itens antes de finalizar</p>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <strong>Total:</strong>
+                    <strong class="text-success">R$ {{ "%.2f"|format(total) }}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

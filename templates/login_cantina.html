@@ -1,0 +1,31 @@
+{% extends "base_cantina.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white text-center">
+                <h4><i class="fas fa-sign-in-alt"></i> Acesso à Cantina</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" required placeholder="seuemail@faculdade.com">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Senha</label>
+                        <input type="password" name="senha" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-utensils"></i> Entrar
+                    </button>
+                </form>
+            </div>
+            <div class="card-footer text-center">
+                <small>Primeira vez? <a href="/cadastro">Cadastre-se aqui</a></small><br>
+                <small class="text-muted">Teste: aluno@faculdade.com / 123456</small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
