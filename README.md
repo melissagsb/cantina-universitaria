@@ -15,7 +15,7 @@ Projeto de um sistema e-commerce de uma cantina universitária referente à mat�
 
 O sistema está hospedado na nuvem, através da plataforma PythonAnywhere, e pode ser acessado de qualquer lugar:
 
-** Link do site:** [https://melissagsb.pythonanywhere.com](https://melissagsb.pythonanywhere.com)
+**Link do site:** [https://melissagsb.pythonanywhere.com](https://melissagsb.pythonanywhere.com)
 
 ##  Funcionalidades
 
