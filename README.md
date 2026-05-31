@@ -11,6 +11,12 @@ Sistema de pedidos online para cantina universitária desenvolvido em Flask.
 
 Projeto de um sistema e-commerce de uma cantina universitária referente à matéria de **Desenvolvimento Rápido de Aplicações em Python**, como requisito parcial para aprovação na disciplina. As funcionalidades incluem permitir que alunos da faculdade façam pedidos na cantina da universidade de forma online, consultem o cardápio e visualizem seu histórico de pedidos.
 
+##  Acesso Online
+
+O sistema está hospedado na nuvem, através da plataforma PythonAnywhere, e pode ser acessado de qualquer lugar:
+
+** Link do site:** [https://melissagsb.pythonanywhere.com](https://melissagsb.pythonanywhere.com)
+
 ##  Funcionalidades
 
 ### Para Alunos
