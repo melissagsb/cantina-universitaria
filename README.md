@@ -3,21 +3,31 @@
 ![SQLite](https://img.shields.io/badge/SQLite-3-blue)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-# 🍔 Cantina Universitária
+markdown
+# 🍔 Cantina Universitária - Uniruy
 
 Sistema de pedidos online para cantina universitária desenvolvido em Flask.
 
-## 📋 Funcionalidades
+## 📋 Sobre o Projeto
 
-- ✅ **Login de usuários** (alunos e administrador)
-- ✅ **Cadastro de alunos** com bônus de R$ 50,00
-- ✅ **Cardápio digital** com categorias (salgados, lanches, bebidas, doces, combos)
-- ✅ **Carrinho de compras** para montar o pedido
-- ✅ **Finalização de pedido** com múltiplas formas de pagamento
-- ✅ **Histórico de pedidos** para consulta
-- ✅ **Área administrativa** para gerenciar o cardápio (CRUD completo)
-- ✅ **Importação de produtos** via API externa
-- ✅ **Filtros** por categoria e opções vegetarianas
+Projeto de um sistema e-commerce de uma cantina universitária referente à matéria de Desenvolvimento Rápido de aplicações em Python, como requisito parcial para aprovação na disciplina. As funcionalidades incluem permitir que alunos da faculdade façam pedidos na cantina da universidade de forma online, consultem o cardápio e visualizem seu histórico de pedidos.
+
+## ✨ Funcionalidades
+
+### Para Alunos
+- ✅ **Login e Cadastro** - Alunos podem criar conta com matrícula e curso
+- ✅ **Cardápio Digital** - Visualização de todos os itens disponíveis
+- ✅ **Filtros** - Filtrar produtos por categoria 
+- ✅ **Filtro Vegetariano** - Opção para exibir apenas produtos vegetarianos
+- ✅ **Carrinho de Compras** - Adicionar e remover itens do pedido
+- ✅ **Finalização de Pedido** - Múltiplas formas de pagamento (dinheiro, cartão, saldo acadêmico)
+- ✅ **Histórico de Pedidos** - Consultar todos os pedidos realizados na conta
+- ✅ **Saldo do Aluno** - Bônus inicial de R$ 50,00 para novos cadastros
+
+### Para Administrador
+- ✅ **Gerenciar Cardápio** - Adicionar, editar e remover produtos
+- ✅ **Importar Produtos** - Importar itens via API externa
+- ✅ **Controle de Estoque** - Gerenciar quantidade disponível de cada produto
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -27,15 +37,18 @@ Sistema de pedidos online para cantina universitária desenvolvido em Flask.
 | **Flask** | Framework web |
 | **SQLite** | Banco de dados relacional |
 | **SQLAlchemy** | ORM para banco de dados |
-| **Flask-Login** | Gerenciamento de sessão |
+| **Flask-Login** | Gerenciamento de sessão e autenticação |
+| **Werkzeug** | Hash de senhas e segurança |
 | **Bootstrap 5** | Frontend e responsividade |
 | **Jinja2** | Templates HTML |
+| **Requests** | Consumo de API externa |
 
 ## 🚀 Como Executar Localmente
 
 ### Pré-requisitos
 - Python 3.10 ou superior
 - Git
+- Pip (gerenciador de pacotes Python)
 
 ### Passo a passo
 
@@ -43,20 +56,104 @@ Sistema de pedidos online para cantina universitária desenvolvido em Flask.
 ```bash
 git clone https://github.com/melissagsb/cantina-universitaria.git
 cd cantina-universitaria
+Crie um ambiente virtual
 
-## 📸 Screenshots
+bash
+python -m venv venv
+Ative o ambiente virtual
 
-### Página Inicial - Home
-![Home](screenshots/home_cantina.png)
+Windows: venv\Scripts\activate
 
-### Carrinho de Compras
-![Carrinho](screenshots/carrinho.png)
+Mac/Linux: source venv/bin/activate
 
-### Finalizar Pedido
-![Checkout](screenshots/checkout.png)
+Instale as dependências
 
-### Histórico de Pedidos
-![Meus Pedidos](screenshots/pedidos.png)
+bash
+pip install -r requirements.txt
+Execute a aplicação
 
-### Área Administrativa
-![Admin](screenshots/home_administrador.png)
+bash
+python app.py
+Acesse no navegador
+
+text
+http://localhost:5000
+👥 Credenciais de Acesso
+Tipo	Email	Senha	Saldo
+Administrador	admin@cantina.com	admin123	R$ 0,00
+Aluno Teste	aluno@faculdade.com	123456	R$ 50,00
+💡 Dica: Crie seu próprio cadastro de aluno para ganhar o bônus de R$ 50,00!
+
+📁 Estrutura do Projeto
+text
+cantina-universitaria/
+├── 📁 screenshots/                 # Imagens do README
+│   ├── home_cantina.png
+│   ├── carrinho.png
+│   ├── checkout.png
+│   ├── pedidos.png
+│   └── home_administrador.png
+├── 📁 templates/                   # Templates HTML
+│   ├── base_cantina.html          # Layout base
+│   ├── cardapio.html              # Página do cardápio
+│   ├── carrinho.html              # Carrinho de compras
+│   ├── checkout_cantina.html      # Finalização do pedido
+│   ├── pedidos_cantina.html       # Histórico de pedidos
+│   ├── login_cantina.html         # Página de login
+│   ├── cadastro_cantina.html      # Cadastro de alunos
+│   ├── produto_criar_cantina.html # Criar produto (admin)
+│   └── produto_editar_cantina.html# Editar produto (admin)
+├── 📄 app.py                       # Arquivo principal da aplicação
+├── 📄 models.py                    # Modelos do banco de dados
+├── 📄 api_client.py                # Integração com API externa
+├── 📄 requirements.txt             # Dependências do projeto
+├── 📄 .gitignore                   # Arquivos ignorados pelo Git
+└── 📄 README.md                    # Documentação do projeto
+🖼️ Screenshots
+Página Inicial - Home
+https://screenshots/home_cantina.png
+Página principal com o cardápio completo da cantina.
+
+Carrinho de Compras
+https://screenshots/carrinho.png
+Carrinho com itens adicionados, quantidades e valor total.
+
+Finalizar Pedido
+https://screenshots/checkout.png
+Tela de finalização com opções de pagamento e observações.
+
+Histórico de Pedidos
+https://screenshots/pedidos.png
+Histórico completo com detalhes de cada pedido realizado.
+
+Área Administrativa
+https://screenshots/home_administrador.png
+Visão do administrador com botões de edição e exclusão.
+
+🔗 API Utilizada
+O sistema consome a Fake Store API (fakestoreapi.com) para importar imagens e dados de produtos, adaptando-os para o contexto da cantina universitária. Entretanto, também foram utilizadas imagens escolhidas manualmente para que coincidissem com os produtos vendidos.
+
+📊 Requisitos do Trabalho Atendidos
+Requisito	Status	Implementação
+App Web Python	✅	Flask + Jinja2
+Frontend + Backend	✅	HTML/Bootstrap + Python
+Banco de Dados	✅	SQLite (Relacional)
+Domínio (Área da faculdade)	✅	Cantina Universitária
+Login	✅	Flask-Login com hash de senha
+4+ Requisitos Funcionais	✅	6 funcionalidades implementadas
+CRUD completo	✅	Produtos (Criar, Ler, Editar, Deletar)
+Relatório	✅	Histórico de pedidos
+API Externa	✅	Fake Store API
+👩‍💻 Autora
+Melissa Gama Soares Bezerra - Bacharelanda em Ciência da Computação
+
+📅 Informações Acadêmicas
+Disciplina: Desenvolvimento Rápido de Aplicações em Python (Python RAD)
+Universidade: Uniruy Wyden - Campus Salvador
+Orientador: Heleno Cardoso
+
+Período: 2026.1
+
+
+📄 Licença
+Este projeto foi desenvolvido para fins acadêmicos
