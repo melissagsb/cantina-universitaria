@@ -8,11 +8,11 @@ markdown
 
 Sistema de pedidos online para cantina universitária desenvolvido em Flask.
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 Projeto de um sistema e-commerce de uma cantina universitária referente à matéria de Desenvolvimento Rápido de aplicações em Python, como requisito parcial para aprovação na disciplina. As funcionalidades incluem permitir que alunos da faculdade façam pedidos na cantina da universidade de forma online, consultem o cardápio e visualizem seu histórico de pedidos.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 ### Para Alunos
 - ✅ **Login e Cadastro** - Alunos podem criar conta com matrícula e curso
@@ -29,7 +29,7 @@ Projeto de um sistema e-commerce de uma cantina universitária referente à mat�
 - ✅ **Importar Produtos** - Importar itens via API externa
 - ✅ **Controle de Estoque** - Gerenciar quantidade disponível de cada produto
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Tecnologia | Finalidade |
 |------------|------------|
@@ -50,42 +50,45 @@ Projeto de um sistema e-commerce de uma cantina universitária referente à mat�
 - Git
 - Pip (gerenciador de pacotes Python)
 
-### Passo a passo
+## Passo a passo
 
-1. **Clone o repositório**
-```bash
+### 1. **Clone o repositório**
+
 git clone https://github.com/melissagsb/cantina-universitaria.git
 cd cantina-universitaria
-Crie um ambiente virtual
 
-bash
+### 2. **Crie um ambiente virtual**
+
 python -m venv venv
-Ative o ambiente virtual
+
+
+### 3. **Ative o ambiente virtual**
 
 Windows: venv\Scripts\activate
 
 Mac/Linux: source venv/bin/activate
 
-Instale as dependências
+### 4. **Instale as dependências**
 
-bash
 pip install -r requirements.txt
-Execute a aplicação
 
-bash
+### 5. **Execute a aplicação**
+
 python app.py
-Acesse no navegador
 
-text
+### 6. **Acesse no navegador**
+
 http://localhost:5000
-👥 Credenciais de Acesso
+
+
+## Credenciais de Acesso
 Tipo	Email	Senha	Saldo
 Administrador	admin@cantina.com	admin123	R$ 0,00
 Aluno Teste	aluno@faculdade.com	123456	R$ 50,00
-💡 Dica: Crie seu próprio cadastro de aluno para ganhar o bônus de R$ 50,00!
+ Dica: Crie seu próprio cadastro de aluno para ganhar o bônus de R$ 50,00!
 
-📁 Estrutura do Projeto
-text
+## Estrutura do Projeto
+
 cantina-universitaria/
 ├── 📁 screenshots/                 # Imagens do README
 │   ├── home_cantina.png
@@ -109,7 +112,8 @@ cantina-universitaria/
 ├── 📄 requirements.txt             # Dependências do projeto
 ├── 📄 .gitignore                   # Arquivos ignorados pelo Git
 └── 📄 README.md                    # Documentação do projeto
-🖼️ Screenshots
+
+ ## Screenshots
 Página Inicial - Home
 https://screenshots/home_cantina.png
 Página principal com o cardápio completo da cantina.
@@ -130,10 +134,10 @@ Histórico completo com detalhes de cada pedido realizado.
 https://screenshots/home_administrador.png
 Visão do administrador com botões de edição e exclusão.
 
-🔗 API Utilizada
+## API Utilizada
 O sistema consome a Fake Store API (fakestoreapi.com) para importar imagens e dados de produtos, adaptando-os para o contexto da cantina universitária. Entretanto, também foram utilizadas imagens escolhidas manualmente para que coincidissem com os produtos vendidos.
 
-📊 Requisitos do Trabalho Atendidos
+### Requisitos do Trabalho Atendidos
 Requisito	Status	Implementação
 App Web Python	✅	Flask + Jinja2
 Frontend + Backend	✅	HTML/Bootstrap + Python
@@ -144,10 +148,12 @@ Login	✅	Flask-Login com hash de senha
 CRUD completo	✅	Produtos (Criar, Ler, Editar, Deletar)
 Relatório	✅	Histórico de pedidos
 API Externa	✅	Fake Store API
-👩‍💻 Autora
+
+
+# Autora
 Melissa Gama Soares Bezerra - Bacharelanda em Ciência da Computação
 
-📅 Informações Acadêmicas
+### Informações Acadêmicas
 Disciplina: Desenvolvimento Rápido de Aplicações em Python (Python RAD)
 Universidade: Uniruy Wyden - Campus Salvador
 Orientador: Heleno Cardoso
@@ -155,5 +161,5 @@ Orientador: Heleno Cardoso
 Período: 2026.1
 
 
-📄 Licença
+### Licença
 Este projeto foi desenvolvido para fins acadêmicos
